@@ -1,283 +1,329 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Vikrama Harshith Inapurapu — Computer Engineering portfolio." />
-  <title>Vikrama Harshith | Computer Engineering</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vikrama Harshith | Portfolio</title>
+  <meta
+    name="description"
+    content="Vikrama Harshith Inapurapu - Computer Engineering portfolio with a 3D scroll-driven GPU experience."
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <canvas id="scene" aria-hidden="true"></canvas>
-  <div class="noise" aria-hidden="true"></div>
+  <canvas id="scene"></canvas>
+  <div class="bg-grid" aria-hidden="true"></div>
 
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Back to top">
+    <a href="#home" class="brand" aria-label="Back to top">
       <span class="brand-mark">VH</span>
-      <span class="brand-text">greyheartwood</span>
     </a>
 
-    <nav class="nav" aria-label="Portfolio sections">
+    <nav class="top-nav">
+      <a href="#about">About</a>
       <a href="#coursework">Coursework</a>
       <a href="#projects">Projects</a>
       <a href="#research">Research</a>
       <a href="#certifications">Certifications</a>
       <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
+  <aside class="progress-meter" aria-hidden="true">
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <div class="progress-value" id="progressValue">00%</div>
+  </aside>
+
   <main>
-    <section class="story hero" id="home" data-scene="0">
-      <div class="content hero-content">
+    <section class="panel-section hero" id="home">
+      <div class="panel-content hero-content">
         <p class="eyebrow">COMPUTER ENGINEERING · UT DALLAS</p>
-        <h1>Vikrama Harshith<br><span>Inapurapu</span></h1>
-        <p class="lede">
+        <h1>Vikrama Harshith<br />Inapurapu</h1>
+        <p class="hero-subtitle">
           Embedded systems, digital hardware, robotics, semiconductor research,
           software, and AI automation — explored through one interactive system.
         </p>
-
-        <div class="hero-actions">
-          <a class="button primary" href="#coursework">Explore the chip</a>
-          <a class="button secondary" href="https://github.com/greyheartwood" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="button secondary" href="https://linkedin.com/in/vikramaharshith" target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
-
-        <div class="scroll-cue" aria-hidden="true">
-          <span>SCROLL TO DISASSEMBLE</span>
-          <div class="scroll-line"></div>
+        <div class="hero-mini">
+          <span>Scroll to explore the GPU architecture of my work</span>
         </div>
       </div>
     </section>
 
-    <section class="story" id="coursework" data-scene="1">
-      <div class="content split left">
-        <div class="section-kicker">01 · FOUNDATION</div>
-        <h2>Coursework</h2>
-        <p class="section-intro">
-          The base layer: the theory that supports everything above it.
-        </p>
-
-        <div class="data-grid">
-          <button class="data-card" data-detail="course-carch">
-            <span class="card-index">01A</span>
-            <strong>Computer Architecture</strong>
-            <span>Processors · memory · low-level systems</span>
-          </button>
-          <button class="data-card" data-detail="course-embedded">
-            <span class="card-index">01B</span>
-            <strong>Embedded Systems</strong>
-            <span>Microcontrollers · firmware · interfaces</span>
-          </button>
-          <button class="data-card" data-detail="course-digital">
-            <span class="card-index">01C</span>
-            <strong>Digital Logic Design</strong>
-            <span>Logic · RTL foundations · hardware thinking</span>
-          </button>
-          <button class="data-card" data-detail="course-dsa">
-            <span class="card-index">01D</span>
-            <strong>Data Structures & Algorithms</strong>
-            <span>Efficient software · problem solving</span>
-          </button>
-          <button class="data-card" data-detail="course-software">
-            <span class="card-index">01E</span>
-            <strong>Software Engineering</strong>
-            <span>Design · testing · development workflow</span>
-          </button>
-          <button class="data-card" data-detail="course-circuits">
-            <span class="card-index">01F</span>
-            <strong>Electronic Circuits</strong>
-            <span>Analog foundations · circuit behavior</span>
-          </button>
-        </div>
-
-        <p class="planned">
-          Planned / upcoming in resume variants: Computer Networks, Database Systems,
-          Operating Systems, Introduction to Artificial Intelligence.
+    <section class="panel-section" id="about">
+      <div class="panel-content content-left narrow">
+        <p class="section-kicker">01 · ABOUT</p>
+        <h2>Built through curiosity.</h2>
+        <p class="lead">
+          I’m a Computer Engineering student at The University of Texas at Dallas with interests in embedded systems, digital hardware, semiconductor technology, software development, and AI. I enjoy building and debugging real-world systems—from microcontroller firmware and FPGA designs to robotics, sensing, and hardware-software integration. Through hands-on projects, research, and technical coursework, I’ve developed experience with C/C++, Python, Verilog, Linux, and modern engineering tools. I’m driven by curiosity, continuous learning, and the challenge of turning complex ideas into practical, reliable technology.
         </p>
       </div>
     </section>
 
-    <section class="story" id="projects" data-scene="2">
-      <div class="content split right">
-        <div class="section-kicker">02 · BUILD</div>
-        <h2>Projects</h2>
+    <section class="panel-section" id="coursework">
+      <div class="panel-content content-right wide">
+        <p class="section-kicker">02 · COURSEWORK</p>
+        <h2>Foundations.</h2>
         <p class="section-intro">
-          Systems where firmware, software, sensing, hardware, and verification meet.
+          The structural base beneath everything else: system thinking, hardware,
+          software, logic, and engineering fundamentals.
         </p>
 
-        <div class="project-stack">
-          <article class="project-card">
-            <div class="project-topline"><span>EMBEDDED</span><span>C / C++ · SENSORS</span></div>
+        <div class="card-grid two-col">
+          <button class="info-card" data-detail="cw-architecture">
+            <span class="card-tag">COURSE</span>
+            <h3>Computer Architecture</h3>
+            <p>Processors, memory, low-level system behavior, and digital computation.</p>
+          </button>
+
+          <button class="info-card" data-detail="cw-embedded">
+            <span class="card-tag">COURSE</span>
+            <h3>Embedded Systems</h3>
+            <p>Firmware, microcontrollers, hardware interfaces, and system debugging.</p>
+          </button>
+
+          <button class="info-card" data-detail="cw-digital">
+            <span class="card-tag">COURSE</span>
+            <h3>Digital Logic Design</h3>
+            <p>Logic design, hardware thinking, and foundations for FPGA/RTL work.</p>
+          </button>
+
+          <button class="info-card" data-detail="cw-software">
+            <span class="card-tag">COURSE</span>
+            <h3>Software Engineering</h3>
+            <p>Design, implementation, testing, debugging, and development workflow.</p>
+          </button>
+
+          <button class="info-card" data-detail="cw-dsa">
+            <span class="card-tag">COURSE</span>
+            <h3>Data Structures & Algorithms</h3>
+            <p>Efficient problem solving, algorithmic design, and computational thinking.</p>
+          </button>
+
+          <button class="info-card" data-detail="cw-circuits">
+            <span class="card-tag">COURSE</span>
+            <h3>Electronic Circuits</h3>
+            <p>Analog and circuit-level foundations supporting embedded hardware work.</p>
+          </button>
+        </div>
+
+        <p class="small-note">
+          Also reflected across resume versions: Discrete Mathematics for Computing,
+          Computer Networks, Database Systems, Operating Systems, and Electrical Network Analysis.
+        </p>
+      </div>
+    </section>
+
+    <section class="panel-section" id="projects">
+      <div class="panel-content content-left wide">
+        <p class="section-kicker">03 · PROJECTS</p>
+        <h2>Systems in motion.</h2>
+        <p class="section-intro">
+          Firmware, full-stack software, sensing systems, and robotics — built by combining
+          hardware and software into working systems.
+        </p>
+
+        <div class="stack-list">
+          <article class="stack-card">
+            <div class="stack-meta"><span>EMBEDDED CONTROL</span><span>C/C++ · PYTHON</span></div>
             <h3>Embedded Digital Thermostat</h3>
-            <p>Temperature monitoring and automated control with sensor integration, digital control logic, firmware debugging, and Python workflow automation.</p>
-            <button class="inline-link" data-detail="project-thermostat">Open project layer →</button>
+            <p>Temperature monitoring and automated control with firmware, sensors, and iterative validation.</p>
+            <button class="text-link" data-detail="project-thermostat">Open deeper layer →</button>
           </article>
 
-          <article class="project-card">
-            <div class="project-topline"><span>FULL STACK</span><span>REACT · NODE · SQLITE</span></div>
-            <h3>Poyo's Potion Dashboard · HackUTD</h3>
-            <p>Inventory tracking and auditing with REST APIs, database workflows, discrepancy detection, and real-time visualization.</p>
-            <button class="inline-link" data-detail="project-poyo">Open project layer →</button>
+          <article class="stack-card">
+            <div class="stack-meta"><span>FULL STACK</span><span>REACT · NODE · SQLITE</span></div>
+            <h3>Poyo's Potion Dashboard</h3>
+            <p>HackUTD inventory dashboard with REST APIs, database workflows, discrepancy detection, and visualization.</p>
+            <button class="text-link" data-detail="project-poyo">Open deeper layer →</button>
           </article>
 
-          <article class="project-card">
-            <div class="project-topline"><span>DIGITAL HARDWARE</span><span>VERILOG · HLS</span></div>
-            <h3>HLS & FPGA Optimization</h3>
-            <p>Hardware optimization using pipelining, parallelism, loop optimization, simulation, and waveform analysis.</p>
-            <button class="inline-link" data-detail="project-hls">Open project layer →</button>
+          <article class="stack-card">
+            <div class="stack-meta"><span>IEEE</span><span>ESP32 · WIFI</span></div>
+            <h3>ESP32 Sensing & Monitoring System</h3>
+            <p>Environmental monitoring, wireless communication, and camera streaming using ESP32-based firmware.</p>
+            <button class="text-link" data-detail="project-esp32">Open deeper layer →</button>
           </article>
 
-          <article class="project-card">
-            <div class="project-topline"><span>IEEE</span><span>ESP32 · WIFI</span></div>
-            <h3>ESP32 Sensing & Monitoring</h3>
-            <p>Environmental sensing, camera streaming, wireless communication, embedded firmware, and system debugging.</p>
-            <button class="inline-link" data-detail="project-esp32">Open project layer →</button>
-          </article>
-
-          <article class="project-card">
-            <div class="project-topline"><span>ROBOTICS</span><span>ROS2 · IMU · LIDAR</span></div>
+          <article class="stack-card">
+            <div class="stack-meta"><span>ROBOTICS</span><span>ROS2 · IMU · LIDAR</span></div>
             <h3>Solis Rover</h3>
-            <p>Embedded firmware, ROS2 nodes, sensors, motor control, BNO08X IMU and LiDAR integration, board bring-up, and system testing.</p>
-            <button class="inline-link" data-detail="project-solis">Open project layer →</button>
+            <p>Embedded firmware and hardware-software integration for rover sensing and control.</p>
+            <button class="text-link" data-detail="project-solis">Open deeper layer →</button>
+          </article>
+
+          <article class="stack-card">
+            <div class="stack-meta"><span>DIGITAL HARDWARE</span><span>VERILOG · HLS</span></div>
+            <h3>HLS & FPGA Optimization</h3>
+            <p>Hardware performance improvements through pipelining, parallelism, HLS, and verification.</p>
+            <button class="text-link" data-detail="project-hls">Open deeper layer →</button>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="story" id="research" data-scene="3">
-      <div class="content split left">
-        <div class="section-kicker">03 · INVESTIGATE</div>
-        <h2>Research</h2>
+    <section class="panel-section" id="research">
+      <div class="panel-content content-right wide">
+        <p class="section-kicker">04 · RESEARCH</p>
+        <h2>From devices to architectures.</h2>
         <p class="section-intro">
-          Two labs, from semiconductor fabrication at the device level to digital hardware optimization at the architecture level.
+          Research across semiconductor fabrication and digital hardware optimization.
         </p>
 
         <div class="timeline">
-          <article class="timeline-item">
-            <div class="timeline-meta">
-              <span>MAY 2026 — AUG 2026</span>
+          <article class="timeline-card">
+            <div class="timeline-head">
               <span>DARC LABS · UTD</span>
+              <span>May 2026 – Aug 2026</span>
             </div>
             <h3>High-Level Synthesis & Digital Hardware Research</h3>
-            <p>Developed and optimized Verilog, C/C++, FPGA, and HLS implementations; applied pipelining and parallelism; validated designs with simulation and waveform analysis; built Python automation for research workflows.</p>
-            <button class="inline-link" data-detail="research-darc">Inspect research layer →</button>
+            <p>
+              Worked with Verilog, C/C++, HLS, FPGA workflows, pipelining, parallelism,
+              simulation, waveform analysis, and Python automation.
+            </p>
+            <button class="text-link" data-detail="research-darc">Open deeper layer →</button>
           </article>
 
-          <article class="timeline-item">
-            <div class="timeline-meta">
-              <span>MAY 2025 — AUG 2025</span>
+          <article class="timeline-card">
+            <div class="timeline-head">
               <span>QUANTUM MATERIALS LAB · UTD</span>
+              <span>May 2025 – Aug 2025</span>
             </div>
             <h3>Semiconductor Fabrication & Characterization</h3>
-            <p>Worked with photolithography, CVD, etching, semiconductor device fabrication, device measurements, process characterization, and experimental data analysis.</p>
-            <button class="inline-link" data-detail="research-qml">Inspect research layer →</button>
+            <p>
+              Worked with photolithography, CVD, etching, device fabrication,
+              measurements, process characterization, and experimental analysis.
+            </p>
+            <button class="text-link" data-detail="research-qml">Open deeper layer →</button>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="story" id="certifications" data-scene="4">
-      <div class="content split right">
-        <div class="section-kicker">04 · EXPAND</div>
-        <h2>Certifications</h2>
+    <section class="panel-section" id="certifications">
+      <div class="panel-content content-left wide">
+        <p class="section-kicker">05 · CERTIFICATIONS</p>
+        <h2>Supplemental learning.</h2>
         <p class="section-intro">
-          Supplemental learning across AI, cloud, programming, and problem solving.
+          AI, cloud, programming, and cybersecurity learning outside the classroom.
         </p>
 
         <div class="cert-list">
-          <button class="cert-row" data-detail="cert-cs50">
-            <span>01</span>
-            <strong>CS50 Introduction to Artificial Intelligence with Python</strong>
-            <em>Harvard University</em>
-          </button>
           <button class="cert-row" data-detail="cert-claude">
-            <span>02</span>
+            <span>01</span>
             <strong>Claude Code in Action</strong>
             <em>Anthropic</em>
           </button>
+
           <button class="cert-row" data-detail="cert-aws">
-            <span>03</span>
-            <strong>Cloud Computing with Amazon Web Services</strong>
-            <em>AWS</em>
+            <span>02</span>
+            <strong>AWS Cloud Practitioner Essentials</strong>
+            <em>AWS Training & Certification</em>
           </button>
+
           <button class="cert-row" data-detail="cert-ibm">
+            <span>03</span>
+            <strong>Introduction to Cloud</strong>
+            <em>IBM / Cognitive Class</em>
+          </button>
+
+          <button class="cert-row" data-detail="cert-cisco">
             <span>04</span>
-            <strong>Introduction to Cloud Computing</strong>
-            <em>IBM</em>
+            <strong>Introduction to Cybersecurity</strong>
+            <em>Cisco Networking Academy</em>
           </button>
-          <button class="cert-row" data-detail="cert-hackerrank">
+
+          <button class="cert-row" data-detail="cert-python">
             <span>05</span>
-            <strong>HackerRank Verified</strong>
-            <em>Python · Java</em>
+            <strong>Python (Basic)</strong>
+            <em>HackerRank</em>
           </button>
-          <a class="cert-row" href="https://leetcode.com/u/Vikrama_Harshith/" target="_blank" rel="noreferrer">
+
+          <button class="cert-row" data-detail="cert-java">
             <span>06</span>
-            <strong>LeetCode</strong>
-            <em>250+ submissions ↗</em>
-          </a>
+            <strong>Java (Basic)</strong>
+            <em>HackerRank</em>
+          </button>
         </div>
       </div>
     </section>
 
-    <section class="story" id="skills" data-scene="5">
-      <div class="content split left">
-        <div class="section-kicker">05 · SYSTEM MAP</div>
-        <h2>Skills</h2>
+    <section class="panel-section" id="skills">
+      <div class="panel-content content-right wide">
+        <p class="section-kicker">06 · SKILLS</p>
+        <h2>One integrated stack.</h2>
         <p class="section-intro">
-          The layers reconnect into one system.
+          Hardware, embedded systems, software, AI, and engineering tools working together.
         </p>
 
-        <div class="skills-map">
-          <button class="skill-node" data-detail="skills-programming">
-            <span>PROGRAMMING</span>
-            <strong>C · C++ · Python · Java · JavaScript · SQL · MATLAB · Bash</strong>
+        <div class="skills-grid">
+          <button class="skill-card" data-detail="skill-programming">
+            <span class="card-tag">PROGRAMMING</span>
+            <h3>C · C++ · Python · Java · JavaScript · SQL · MATLAB · Bash</h3>
           </button>
-          <button class="skill-node" data-detail="skills-hardware">
-            <span>DIGITAL HARDWARE</span>
-            <strong>Verilog · VHDL · RTL · FPGA · HLS · Verification</strong>
+
+          <button class="skill-card" data-detail="skill-hardware">
+            <span class="card-tag">DIGITAL HARDWARE</span>
+            <h3>Verilog · VHDL · RTL · FPGA · HLS · Hardware Verification</h3>
           </button>
-          <button class="skill-node" data-detail="skills-embedded">
-            <span>EMBEDDED / ROBOTICS</span>
-            <strong>ESP32 · ROS2 · Sensors · Firmware · Hardware-Software Integration</strong>
+
+          <button class="skill-card" data-detail="skill-embedded">
+            <span class="card-tag">EMBEDDED / ROBOTICS</span>
+            <h3>ESP32 · ROS2 · Sensors · Firmware · Hardware-Software Integration</h3>
           </button>
-          <button class="skill-node" data-detail="skills-tools">
-            <span>TEST / TOOLS</span>
-            <strong>Oscilloscope · Logic Analyzer · Multimeter · Linux · Git · KiCad · OrCAD · SolidWorks</strong>
+
+          <button class="skill-card" data-detail="skill-tools">
+            <span class="card-tag">TEST / TOOLS</span>
+            <h3>Linux · Git · Oscilloscope · Logic Analyzer · Multimeter · KiCad · OrCAD · SolidWorks</h3>
           </button>
-          <button class="skill-node" data-detail="skills-ai">
-            <span>SOFTWARE / AI</span>
-            <strong>React · Node.js · REST APIs · Databases · AWS · LLMs · AI Automation</strong>
+
+          <button class="skill-card" data-detail="skill-ai">
+            <span class="card-tag">SOFTWARE / AI</span>
+            <h3>React · Node.js · REST APIs · Databases · AWS · LLMs · AI Automation</h3>
           </button>
         </div>
+      </div>
+    </section>
 
-        <div class="contact-panel">
-          <p>Want the conventional version?</p>
-          <a class="button primary" href="mailto:vikramaharshith@gmail.com">Contact me</a>
-          <a class="button secondary" href="https://linkedin.com/in/vikramaharshith" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="button secondary" href="https://github.com/greyheartwood" target="_blank" rel="noreferrer">GitHub</a>
+    <section class="panel-section final-section" id="contact">
+      <div class="panel-content content-left narrow">
+        <p class="section-kicker">07 · CONTACT</p>
+        <h2>Let’s connect.</h2>
+        <p class="lead">
+          The GPU comes back together here — just like the way all of these areas
+          come together in the kind of engineering work I want to keep building.
+        </p>
+
+        <div class="contact-block">
+          <div class="contact-line">
+            <span>Email</span>
+            <a href="mailto:vikramaharshith@gmail.com">vikramaharshith@gmail.com</a>
+          </div>
+
+          <div class="contact-line">
+            <span>Phone</span>
+            <a href="tel:+19453721464">(945) 372-1464</a>
+          </div>
+
+          <div class="contact-actions">
+            <a class="contact-button" href="https://linkedin.com/in/vikramaharshith" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="contact-button ghost" href="https://github.com/greyheartwood" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <aside class="scene-meter" aria-hidden="true">
-    <span class="meter-label">SYSTEM DISASSEMBLY</span>
-    <div class="meter-track"><div class="meter-fill"></div></div>
-    <span class="meter-value">00%</span>
-  </aside>
-
-  <div class="detail-panel" id="detail-panel" aria-hidden="true">
+  <div class="detail-panel" id="detailPanel" aria-hidden="true">
     <div class="detail-shell">
-      <button class="detail-close" type="button" aria-label="Close details">×</button>
-      <p class="detail-label">DEEPER LAYER</p>
-      <h3 id="detail-title"></h3>
-      <div id="detail-body"></div>
+      <button class="close-detail" id="closeDetail" aria-label="Close detail panel">×</button>
+      <p class="detail-kicker">DEEPER LAYER</p>
+      <h3 id="detailTitle"></h3>
+      <div id="detailBody"></div>
     </div>
   </div>
-
-  <noscript>
-    <div class="noscript">This portfolio uses JavaScript for the 3D experience. Enable JavaScript to view it.</div>
-  </noscript>
 
   <script type="module" src="script.js"></script>
 </body>
